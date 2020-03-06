@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import NasaCard from "./NasaCard.js";
-
+import styled from 'styled-components';
 function Nasa() {
     const [article, setArticle] = useState([]);
 
@@ -15,12 +15,15 @@ function Nasa() {
 
     }, [article])
 
-    console.log(article.date);
+    
+
     return <NasaCard
+        
         date={article.date}
         title={article.title}
-        explaination={article.explanation}
         url={article.url}
+        explaination={article.explanation}
+        
     />
 }
 
